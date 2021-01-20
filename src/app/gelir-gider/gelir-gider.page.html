@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Gelir Gider Ekranı</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Gider Tablosu</h3>
+  <ion-grid>
+    <ion-row>
+      <ion-label position="fixed">ID</ion-label>
+      <ion-label position="fixed">Harcama</ion-label>
+      <ion-label position="undefined">Tutar</ion-label>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row *ngFor="let x of GelirGiderList">
+      <ion-col size="4">{{ x.gelirGiderID }}</ion-col>
+      <ion-col size="4">{{ x.HarcamaAdi }}</ion-col>
+      <ion-col size="4">{{ x.HarcamaTutari }}</ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+
+
+    <h3>Gelir Tablosu</h3>
+
+    <ion-row>
+      <ion-label position="fixed">ID</ion-label>
+      <ion-label position="fixed">Gelir</ion-label>
+      <ion-label position="undefined">Tutar</ion-label>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row *ngFor="let x of GelirGiderList">
+      <ion-col size="4" position="fixed">{{ x.gelirGiderID }}</ion-col>
+      <ion-col size="4" position="fixed">{{ x.GelirAdi }}</ion-col>
+      <ion-col size="4" position="fixed">{{ x.GelirTutari }}</ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

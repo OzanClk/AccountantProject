@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title text-center>
+      <p class="centered-p" >Giriş Ekranı</p>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding='true'>
+  <!-- <div class="center">
+    <img src="" class="smallLogo" />
+    <h1>Sign In</h1>
+  </div> -->
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Kullanıcı ID</ion-label>
+        <ion-input [(ngModel)]="userID" #ctrl="ngModel" required autocomplete="on" type="text" name="userID"
+          placeholder="Kullanıcı ID'nizi giriniz">
+        </ion-input> 
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Şifre</ion-label>
+        <ion-input autocomplete="on" type="password" name="password" placeholder="Şifrenizi girinz"></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <ion-button expand="block" share="round" color="medium" ion-button (click)="loginAction()">GİRİŞ
+    </ion-button>
+    <ion-item lines='none'>
+      <ion-button color="dark">Hesap Oluştur</ion-button>
+    </ion-item>
+
+
+  </form>
+</ion-content>

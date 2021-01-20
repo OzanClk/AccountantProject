@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32c1283f31b2442d954d849eff4a6685" Name="Diagram1">
+        <EntityTypeShape EntityType="AccountantProjectModel.gelirGiderTablosu" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountantProjectModel.OdemeTablosu" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountantProjectModel.stokTablosu" Width="1.5" PointX="6.875" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountantProjectModel.Users" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="AccountantProjectModel.FK_gelirGiderTablosu_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountantProjectModel.FK_OdemeTablosu_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="AccountantProjectModel.FK_stokTablosu_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

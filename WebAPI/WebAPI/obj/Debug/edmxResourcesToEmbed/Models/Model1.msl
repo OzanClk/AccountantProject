@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AccountantProjectModelStoreContainer" CdmEntityContainer="AccountantProjectEntities">
+    <EntitySetMapping Name="gelirGiderTablosu">
+      <EntityTypeMapping TypeName="AccountantProjectModel.gelirGiderTablosu">
+        <MappingFragment StoreEntitySet="gelirGiderTablosu">
+          <ScalarProperty Name="gelirGiderID" ColumnName="gelirGiderID" />
+          <ScalarProperty Name="HarcamaAdi" ColumnName="HarcamaAdi" />
+          <ScalarProperty Name="HarcamaTutari" ColumnName="HarcamaTutari" />
+          <ScalarProperty Name="GelirAdi" ColumnName="GelirAdi" />
+          <ScalarProperty Name="GelirTutari" ColumnName="GelirTutari" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdemeTablosu">
+      <EntityTypeMapping TypeName="AccountantProjectModel.OdemeTablosu">
+        <MappingFragment StoreEntitySet="OdemeTablosu">
+          <ScalarProperty Name="OdemeID" ColumnName="OdemeID" />
+          <ScalarProperty Name="OdemeAdi" ColumnName="OdemeAdi" />
+          <ScalarProperty Name="OdemeTarihi" ColumnName="OdemeTarihi" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stokTablosu">
+      <EntityTypeMapping TypeName="AccountantProjectModel.stokTablosu">
+        <MappingFragment StoreEntitySet="stokTablosu">
+          <ScalarProperty Name="stokID" ColumnName="stokID" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="StokAdedi" ColumnName="StokAdedi" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AccountantProjectModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

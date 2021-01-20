@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccountantProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="gelirGiderTablosu">
+    <Key>
+      <PropertyRef Name="gelirGiderID" />
+    </Key>
+    <Property Name="gelirGiderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HarcamaAdi" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="HarcamaTutari" Type="Double" />
+    <Property Name="GelirAdi" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="GelirTutari" Type="Double" />
+    <Property Name="userid" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_gelirGiderTablosu_Users" FromRole="gelirGiderTablosu" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="OdemeTablosu">
+    <Key>
+      <PropertyRef Name="OdemeID" />
+    </Key>
+    <Property Name="OdemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdemeAdi" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="OdemeTarihi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="userid" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_OdemeTablosu_Users" FromRole="OdemeTablosu" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="stokTablosu">
+    <Key>
+      <PropertyRef Name="stokID" />
+    </Key>
+    <Property Name="stokID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunAdi" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="StokAdedi" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_stokTablosu_Users" FromRole="stokTablosu" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="gelirGiderTablosu" Relationship="Self.FK_gelirGiderTablosu_Users" FromRole="Users" ToRole="gelirGiderTablosu" />
+    <NavigationProperty Name="OdemeTablosu" Relationship="Self.FK_OdemeTablosu_Users" FromRole="Users" ToRole="OdemeTablosu" />
+    <NavigationProperty Name="stokTablosu" Relationship="Self.FK_stokTablosu_Users" FromRole="Users" ToRole="stokTablosu" />
+  </EntityType>
+  <Association Name="FK_gelirGiderTablosu_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="gelirGiderTablosu" Type="Self.gelirGiderTablosu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="gelirGiderTablosu">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OdemeTablosu_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="OdemeTablosu" Type="Self.OdemeTablosu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OdemeTablosu">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_stokTablosu_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="stokTablosu" Type="Self.stokTablosu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="stokTablosu">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AccountantProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="gelirGiderTablosu" EntityType="Self.gelirGiderTablosu" />
+    <EntitySet Name="OdemeTablosu" EntityType="Self.OdemeTablosu" />
+    <EntitySet Name="stokTablosu" EntityType="Self.stokTablosu" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_gelirGiderTablosu_Users" Association="Self.FK_gelirGiderTablosu_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="gelirGiderTablosu" EntitySet="gelirGiderTablosu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OdemeTablosu_Users" Association="Self.FK_OdemeTablosu_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="OdemeTablosu" EntitySet="OdemeTablosu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_stokTablosu_Users" Association="Self.FK_stokTablosu_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="stokTablosu" EntitySet="stokTablosu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

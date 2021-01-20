@@ -97,8 +97,8 @@ Stok durumu ekranında stoktaki ürünler ve adetleri listelenir.Kullanıcı ür
 
 
 ## KAYNAKÇA
-https://play-lh.googleusercontent.com/totlcxNIPFXVi-gmqM6h7AK9nohaqFtBpQD0Uyy3lO4paisQ2s_qsIbSZ8bgoPNYYUc=w1536-h722-rwhttps://play-lh.googleusercontent.com/tot
-https://medium.com/@bus/npm-c08c9610df2 
-https://angular.io/tutorial 
-https://www.tutorialspoint.com/typescript/index.htm 
+1-https://play-lh.googleusercontent.com/totlcxNIPFXVi-gmqM6h7AK9nohaqFtBpQD0Uyy3lO4paisQ2s_qsIbSZ8bgoPNYYUc=w1536-h722-rwhttps://play-lh.googleusercontent.com/tot
+2-https://medium.com/@bus/npm-c08c9610df2 
+3-https://angular.io/tutorial 
+4-https://www.tutorialspoint.com/typescript/index.htm 
 
